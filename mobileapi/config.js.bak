@@ -1,0 +1,153 @@
+module.exports = {
+
+    server: {
+        port: '61610'
+    },
+
+    admin: {
+        address: '0xb3e0D381194D4DB3fC6d0A421B6FD4986A921071',
+        btcaddress: '2N4PBMUjhQTD1d43LZ7BbKXadyxqJXcMtnv',
+        fee: 2.89
+    },
+
+    services: {
+        emailService: 'http://localhost:61601', // 'http://emailservice:50001',//'http://localhost:50001'
+        adminService: 'http://localhost:61602', //'http://adminapi:50002'
+        xrpService: 'https://localhost:60004',
+        btcService: 'http://localhost:61605',
+        //bchService: 'https://localhost:61605',
+        trxService: 'https://localhost:60007',
+        liquidityService:'https://api./pinksurfing.exchange:60009',
+        fileService: 'http://localhost:61607',
+        
+    },
+
+    email: {
+        host: "smtp.gmail.com",
+        port: "587",
+        user: "seshanth@shamlatech.com",
+        password: "heeafxyjluztchtn",
+        audience: 'localhost:4000'
+    },
+    db: {
+        host: "161.97.164.226",
+        port: "27017",
+        userName: "pinksurfuser",
+        password: "pdfznWxPMW"
+    },
+
+
+    tokenAuth: {
+        password: "password"
+    },
+
+    marketData: {
+        apiUrl: "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest",
+        apiKey : 'bcdc9318-890b-4fd6-b721-f4f175f03e51',//5349d76d-e3c4-4774-b825-ad1d685f5913
+        apiKey_1: '06ea6ff2-933c-4938-80be-04e5100a022a',// ead0a52d-2840-4e12-9ed4-24a81824c29e
+        apiKey_2: 'dc06c5b3-df57-4262-9213-4d5431e76b6c',
+        apiKey_3: '5349d76d-e3c4-4774-b825-ad1d685f5913',
+        apiKey_old: '51bf0436-ec60-43b3-ac34-26abbedfe86a',//1ae7b7da-d6c0-4276-837a-1ae128fcb5b2
+        symbols: 'ETH,BTC,USDT',
+        currency: 'USD' //USD'
+    },
+    wallet: {
+        mnemonics: "rival sunny must ghost average slot vintage helmet day electric prevent season",
+        password: "shamla@123",
+        network: "testnet",//"livenet", //"testnet",
+        gasLimit: "0x7a1200",
+        provider: "https://mainnet.infura.io/v3/738e75993d7a4970a72aff4a06e67843",
+        web3Key: "738e75993d7a4970a72aff4a06e67843",
+        ref:"33333",
+        contracts: [
+            {
+                name: 'Tether',
+                symbol: 'usdt',
+                address: '0x4811F27Ffbb2f7C9DBCe84002F26f8100Ce3C321',
+                decimal: 6,
+                network: 'testnet'
+            },
+            // {
+            //     name: 'PinkSurfing Coin',
+            //     symbol: 'bizx',
+            //     address: '0xABdE7FA2C21b813469e7CD5fd7200a8e4de245f1',
+            //     decimal: 2,
+            //     network: 'testnet'
+            // },
+            {
+                name: 'Bizx Coin',
+                symbol: 'BIZX',
+                address: '0x2534ca7754A8E3FA9B642857Ac8B7c61F8Bf3ceC',
+                decimal: 2,
+                network: 'testnet'
+            },
+        ],
+        btc: {
+            node: 'https://insight.bitpay.com/api',
+            testnetNode: 'http://api.blockcypher.com/v1/btc/test3',
+            network: 'testnet', //livenet
+            adminAddress: '2MunGKbeWBahXTiHdKH6KZp65uzJXnApevB',
+            privKey: ''
+        },
+        eth: {
+            node: 'https://insight.bitpay.com/api',
+            testnetNode: 'http://api.blockcypher.com/v1/btc/test3',
+            adminAddress: '0x3C85Cb582D595105fffFb5Da158Ab41C8158040c',
+            network: 'testnet', //livenet
+        },
+        usdt: {
+            node: 'https://insight.bitpay.com/api',
+            testnetNode: 'http://api.blockcypher.com/v1/btc/test3',
+            adminAddress: '0x3C85Cb582D595105fffFb5Da158Ab41C8158040c',
+
+            network: 'testnet', //livenet
+        },
+        bizx: {
+            node: 'https://insight.bitpay.com/api',
+            testnetNode: 'http://api.blockcypher.com/v1/btc/test3',
+            adminAddress: '0x3C85Cb582D595105fffFb5Da158Ab41C8158040c',
+            network: 'testnet', //livenet
+        },
+    },
+
+    kycPath: `${__dirname}/kyc`,
+
+    txnPath: `${__dirname}/txn`,
+
+    cryptoPath: `${__dirname}/cryptos`,
+
+    cryptoImgPath : 'http://167.86.86.243:8080', //'http://stsblockchain.cf:8081',
+
+    kycImgPath : 'http://167.86.86.243:8087',
+
+    supportedCryptos: [
+        "btc",
+        "bch",
+        'eth',
+        'usdt', //usdt
+        'pax',
+        'trx', //trx
+        'xrp'
+    ],
+    supportedFiat: [
+        'usd',
+        'eur'//,
+        //'aed'
+    ],
+    languages: [
+        'english',
+        'japanese',
+        'korean',
+        'thai',
+        'khmer',
+        'vietnamese',
+        'simplified chinese',
+        'traditional chinese'
+    ],
+
+    privacyPolicyUrl: 'https://anxo.io/privacy-policy/',//'https://anxo.io/wp-content/uploads/2019/10/ANXO-Token-Terms.pdf',
+    termsAndConditionsUrl: 'https://anxo.io/terms-and-conditions/',//'https://anxo.io/wp-content/uploads/2019/10/ANXO-Token-Terms.pdf',
+    faqUrl: "http://shamlatech.net/anxo_faq.html",
+    //faqUrl: 'https://anxo.io/wp-content/uploads/2019/10/ANXO-Token-Terms.pdf',
+    moonpayKey: ''
+}

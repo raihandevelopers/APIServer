@@ -1,0 +1,92 @@
+var mongoose = require('mongoose');
+
+module.exports = mongoose.model('accounts', {
+    email: {
+        type: String
+        // required: true
+    },
+    name: {
+        type: String
+        // required: true
+    },
+    // last_name: String,
+    country: String,
+    phone: String,
+    password: String,
+    language: String,
+    id: String,
+    wallets: {
+        btc: String,
+        eth: String,
+        usdt: String,
+        bizx: String,
+    },
+    ref: Number,
+    countrycode: String,
+    pin: String,
+    kycStatus: String,
+    kycLevel: {
+        type: Number,
+        default: 0
+    },
+    hasTransactionPin: Boolean,
+    FCMToken: String,
+    dob:String,
+    streetAddress:String,
+    unit:String,
+    city:String,
+    state:String,
+    postalCode:Number,
+    localCurrency:String,
+    timeZone: String,
+    secret:String,
+    qrcode:String,
+    auth2:{
+        type:Boolean,
+        default:false
+    },
+    accountStatus:{
+        type:String,
+        default:"active"
+    },
+    profileStatus:{
+        type: Boolean,
+        default:false
+    },
+    fiatBalance: {
+        type: String,
+        default: 0
+    },
+    bankStatus:{
+        type: Boolean,
+        default:false
+    },
+    whitelist:{
+        type: Boolean,
+        default:false
+    },
+    adminLevel : Number,
+    payOutProfit:String,
+    transferProfit:String,
+    passport:{
+        type: Boolean,
+        default:false
+    },
+    license:{
+        type: Boolean,
+        default:false
+    },
+    idcard:{
+        type: Boolean,
+        default:false
+    },
+    phoneAuth:{
+        type: Boolean,
+        default:false
+    },
+    legalName:String,
+    firstName:String,
+    lastName: String
+
+})
+

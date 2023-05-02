@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pinksurfing-309615",
+  "private_key_id": "8fcdb8b2b4d239fb983815c5c070204317ea6caa",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDGKhhyfyGCGCPC\nRQJ2EkyEDmjUTl9B7RbMWeO3P89Winelf+RrlU7XMRQzdlx1imUb/9hEfB1PZyaZ\nNrW6fgqRFq+sB4LQCrnVM8vLBg8PEeROVMhMLuLTV9cQme9+Aq7ToTUKxYh+vthD\nWN6PRp+wR/z4mhUa+TbHCtpfPeVCUNq11AzvB5ikcL/ckqqhBPqhovHoqfY80cYN\nk76CyqpKwzMKAUoeiHPKBVt7SSUm19bDa9OQzYghErR4U7sqA8vVr+GDTzoRDMFI\nfgLuL4/xKwHc+knO5+vxX9xyWWgBqalNfS+mPu6vT3kakpiQvc+mJeHhenBcyXC+\nV/xEacBrAgMBAAECggEAODu620brVdUO1LKrm6DeuLy0D8c7reQfS5cYkShY6Ih7\nomnUApmImXVSc7YbT7mZrqPgFbMYyC8P23uUf1sEGZ8T89/fxbS9flxn8PGDtXWQ\n0Y+qlT/a2zl6jLn6JcqSHPkKqcdbUAhNK3NdGNBkQWx0Q4HKCnD9E+enB07zr2js\nixO13oZ2hMZFJFMjTPPkiefjBVYUPeCq43QzOX4uaTUq9nvIMhZjWTa1ioVTvvq3\n5k9cHxQGOFx7J6+tiHuZGFR+ZfoluGI7GU7PL/mQ8ZE11vB3ZQ+19gsogMUA9w5O\n6k2OB6u7XfgrkPlIQDqNYrOP3CV2DrvRdJTfDKypEQKBgQD/NFHXdWjAIN4K1Z82\npldFduJhMdM3QzFF6o1f1BgjuitK6ASd5n0+8AVKJEn9nwfoIbvUaqbWEwyDg8CE\nTajS0Cggu9uObUUw1vvwrReJrQ7rrmt01WgrZi0x4yYhAeGLqqBYyWRmRLnfy1a7\nqPZ0Nt5V/86a7EnB9/yZFiJ0GwKBgQDGyEB5Nfkowyhpp2xDLFIGKizSzF3L01qT\nebJipqqnOXjGMwEhVffmyYW9LPkbl3+O689coUXV3CEN0TGUuVy4SNBVk07r2rs0\nB5JZTMbvLEXi4Ga6omQMlirOPXD2mGMH3ylzzDUyi7I+cyEA9N9LHov5C1dadSj3\nNYxq5wiJ8QKBgBANIGCm19HNv2l7CiqLx81srsxiL+C37y9wkzfFxUbp/LMXaMLt\nrk75FbwWEDlNeVfWV1QC6T9pr03OSZuIruejhAKbDjIlGUb7HpmCqYpVQiz8qXGN\nwqGIKauLl+hXj/IS50buU8xC4lX7GhdvhyDEGrPaBQqldfYnPNH8HGqlAoGACczP\nmOo3SXItqN/PL5Scyp8DrLTUnvrhiUnDqKds3Gex85uKH7mcSi1/QW9ZLKoQaNxp\nUbjFt6BtpL++gQWOc6trUfy8NFaJSixhY7OsTxhQrbnAds0Qv6obnCVdT1r97uJq\nqcHUkZRfikKkyuZHp+1umy2a9eO2zFFAhfiz7BECgYABikkxRRsSjX145jgSCjMK\n3d60In+hhgQlSvfM2Fr8GGmf6q28IM04Vei2QkNYFmNeggwr4iAACo7DG6C3jhGU\nSRymsLymVmB0GYPVLutyALBN6Vna61ZRcw164gaOufQeo1K2PBXrUYhGbTX4tHQM\n7X8PtyF0vtFu8a5UASHsig==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-5gnp4@pinksurfing-309615.iam.gserviceaccount.com",
+  "client_id": "107935436439533507639",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5gnp4%40pinksurfing-309615.iam.gserviceaccount.com"
+}
