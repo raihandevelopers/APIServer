@@ -1,0 +1,157 @@
+var express = require('express');
+var router = express.Router();
+const body = require('express-validator').body
+const header = require('express-validator').header
+const query = require('express-validator').query
+const validationResult = require('express-validator').validationResult
+const fileUpload = require('express-fileupload');
+
+const config = require('../config')
+const request = require('request-promise')
+const CustomError = require('../src/error')
+const TokenValidator = require('../src/TokenValidator')
+const tokenValidator = new TokenValidator(config.token.password, {
+    expiresIn: "30d"
+})
+
+
+const cache = require('../src/cache')
+
+const accountsModel = require('../models/accounts')
+const contactsModel = require('../models/Contacts')
+const mongoose = require('mongoose')
+
+const validate = (routeName) => {
+    switch (routeName) {
+        case 'forgetPassword':
+            return [
+                body('email').notEmpty().exists().isEmail(),
+                body('securityQuestion').notEmpty().notEmpty(),
+                body('securityAnswer').notEmpty().notEmpty()
+            ]
+
+        case 'passwordResetOtp':
+            return [
+                body('newPassword').notEmpty().exists(),
+                body('otp').notEmpty().exists(),
+                body('email').notEmpty().exists().isEmail()
+            ]
+
+        case 'changePassword':
+            return [
+                body('old_password').notEmpty().exists(),
+                body('new_password').notEmpty().exists().isLength({
+                    min: 8
+                }),
+                header('Authorization').exists().notEmpty()
+            ]
+
+        case 'logout':
+            return [
+                header('Authorization').notEmpty().exists()
+            ]
+
+        case 'updateFCM':
+            return [
+                body('token').exists().notEmpty()
+            ]
+
+        case 'securityQuestion':
+            return [
+                query('email').exists().notEmpty().isEmail()
+            ]
+
+        case 'deleteExtension':
+            return [
+                body('dial_code').exists().notEmpty()
+            ]
+
+        case 'updateExtension':
+            return [
+                body('dial_code').exists().notEmpty(),
+                body('url').exists().notEmpty()
+            ]
+    }
+}
+  
+router.get('/securityQuestion', validate('securityQuestion'), async (req, res) => {
+    console.log("got hit");
+    try {
+
+        let result = await accountsModel.findOne({
+            email: req.query.email
+        }).lean().exec()
+
+        console.log("Result", result)
+        if (result) {
+            if ((result != null || undefined) && result.securityQuestion != undefined) {
+
+                let questions = config.securityQuestions
+                let userDefinedQuestion = result.securityQuestion.trim().toLowerCase().replace(/ /g, "")
+                let filteredQuestions = questions.filter(q => {
+                    q = String(q).trim().toLowerCase().replace(/ /g, "")
+
+                    if (q == userDefinedQuestion) {
+                        return false
+                    }
+
+                    return true
+
+                })
+                res.send({
+                    status: 'success',
+                    message: '',
+                    question: filteredQuestions,
+                    predefinedQuestions: [],
+                    //contacts: result.securityQuestion,
+                    error: 'nil'
+                })
+            } else {
+                res.send({
+                    status: 'success',
+                    message: 'No questions found',
+                    question: '',
+                    //contacts: '',
+                    error: 'nil'
+                })
+            }
+
+        }
+    } catch (err) {
+        console.log(err.message)
+        res.status(500).send({
+            status: 'fail',
+            message: 'error occured',
+            //contacts: [],
+            error: 'nil'
+        })
+    }
+})
+
+
+router.post('/forgetPassword', validate('forgetPassword'), async (req, res, next) => {
+    try {
+        let errors = validationResult(req)
+        if (errors.isEmpty() == false) {
+            console.log(errors.array())
+            next(new CustomError('Invalid Inputs', 422, errors.array()))
+        } else {
+            let {
+                email,
+                securityQuestion,
+                securityAnswer
+            } = req.body
+            securityQuestion = securityQuestion.trim().toLowerCase().replace(/ /g, "")
+            securityAnswer = securityAnswer.trim().toLowerCase().replace(/ /g, "")
+
+            let userAccount = await accountsModel.findOne({
+                email: email
+            }).lean().exec()
+
+            if (userAccount.securityQuestion == undefined || userAccount.securityQuestion == "" || userAccount.answer == undefined || userAccount.answer == "") {
+                next(new CustomError('security Question not set', 422, []))
+                return
+            } else {
+                let userSecurityQuestion = userAccount.securityQuestion.trim().toLowerCase().replace(/ /g, "")
+                let userSecurityAnswer = userAccount.answer.trim().toLowerCase().replace(/ /g, "")
+

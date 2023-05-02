@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "shamlatech-crypto-project",
+  "private_key_id": "ab226e108047289319e8a467c55232b70e8eca88",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nIMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDJ1QnAsHeOohPq\nGH5AQrdf8qhXGQCxktCfwRSEh1FhRWM6F/ytE0hlr6ImJW0Ahcm5xVfUVc5z2jvC\n9tGIF9ZuwZXK9gA/DKgT3ebttBK2ECDzeF3DjVio58S5ZVinKYGNybjymw51ubDt\nRYIhNmxldQ757AZeBFc/qCCwCi19ww3f3HBwS4o8L4KwO1FWAjbRYoZrJnZ273TE\netjb1pTlx3hLfYlxl2NlqCAR/CMHD6Dj4yTxd66pPdXsBYGsD7CiKnrw+GIYWCYi\nTSdi7UQWcfkxnlieQVLglAOcmS4CFpioUFgPhjLIjnwRHEofAXD9bkxpHPT56q2N\nVHnrRlE5AgMBAAECggEAD40ACt4t4AoB4cwQUjAxw81FBizxfj0TIPP1+j4Y2ZdI\njW3StJ0jO158blb83ojwYYVgfoY7+XYrm5p7y3IWvgLhYTlyDGmTu7AhvlfdBzUX\n7Npt0wbdeWoeILC702lhx4Ru4RZsV0q+5JEx9RAl6u1JgZ0bYnwQIuH33shx99n/\n82QzRJXne5na+zEi82/WdqPi5v+Mwt9nZkxbng8SeGGxJ7w72Z91Y5/zgcluUHTC\nbj4Xg+2KCZrOWuylbWcGr0ZG4JUCnuUbJ7mERqqWWMqeq2nxX3ZW7zlqzuszDcwZ\nrIGJugQRtKDLgGffNjuFTnY69d954DvoTDlNASPrWQKBgQDuGRTZjV2O8swtNEMA\niUZsyrQjse5W8GdBEtL2k46wBpxIAiTWuq8Hflucw6wwM9ICeN2jlASxXYVZ53lW\nMfAdGjlKJeq7JEk+nc4qxlHNQOgjQdHRL6uSQb7vADzsUgslOfMPpBatDuaGKyQx\n6xWqQ6onG3GQPZImh0m1HLAtxQKBgQDZAelLqU1xT8JDDZgiVMrm+c++KdJ118ru\nogcZZThHDQrQ5tiA76yCYQ71cMpHJE2eq+N5TZPx6CHWTKPg8smDCfWX+I+BShtS\nprViwlVmFaXZLf/ynM+ULinSGmu4jKzMjY7uDC8s3ee7buk76hFD+eW8tT+5NqP9\nbB4fti3g5QKBgGHvhSj7QemDq0JIxeqZjJNBSZmJHb07A2273XS5Oy7ieTQRVa/R\neB8/9VTlE5V8Kz0DFD+tqcR+8FQLp1gyEE8YM0pxkDzL7yjHZj8n9gvUT+f4seI2\nln8BdhT+5xBZquX0ESt01jL29xFm+2thBDdVv854Nl0bRlt8uG+7zif1AoGAG1+1\nWRj7Lt77x0+QsEv36Fj8zqUh6kGVVLLVqGtvRO8tPRrRlrolDbFGnMlkisLWk7xl\nDmktz2cT1Z+HUJnvt3rrIwd0ur9pYOysls+izCTQ7etyjN0hBjUoi1tP2VDNf2Qf\n8oFQ9hzr3WXpP+iP0v5T75EBf9CXsSERT7jAYs0CgYAOQtV6NwiCCtQYfgKKPPgu\n/gmniXBzP1cvV/5XczkTEJjOyS1VVRPwj02gspqxD+9Y+JPno1KH2Syrh0KCiSpg\ncNrDi/tx9YX+449XiIPBzcVFkznDSnxGgRweGJFuL54A86YZoK+OQisqQIp7Vpam\nC80EshiOo/RcRzbNqkuyCA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-uhtxn@shamlatech-crypto-project.iam.gserviceaccount.com",
+  "client_id": "108176098170704909179",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-uhtxn%40shamlatech-crypto-project.iam.gserviceaccount.com"
+}
