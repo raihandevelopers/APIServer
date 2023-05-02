@@ -1,0 +1,21 @@
+{
+  "name": "btcservice",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "array-foreach-async": "^1.0.1",
+    "bitcore-lib": "^8.16.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "forEachAsync": "^3.0.0",
+    "foreachasync": "^5.1.3",
+    "mongoose": "^5.9.3",
+    "morgan": "~1.9.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
+}
