@@ -104,11 +104,16 @@ app.use(async(req, res, next) => {
         // console.log("VALUES:",value)
 		}
 	}else if (method == 'POST'){
+	 // console.log("VALUES",req.body)
+        // old code have issues 
+        // value = req.body.value
+        // req.user = value
 
-        // console.log("VALUES",req.body)
-
-        value = req.body.value
+        //updated code 
+        value = req.body
         req.user = value
+
+		
 	}
     // console.log("USER:",req.user)
     next()
